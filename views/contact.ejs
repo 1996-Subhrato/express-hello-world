@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partial/navbar') %>
+
+    <div class="wrapper-form">
+      <h1>Contact Us</h1>
+      <br />
+
+      <form id="contactForm">
+        <div class="form-section-flex">
+          <div class="">
+            <label for="">Email</label>
+            <input type="email" required id="email" />
+          </div>
+          <br />
+          <div class="">
+            <label for="">Name</label>
+            <input type="text" required id="fullName" />
+          </div>
+          <br />
+          <div class="">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5"></textarea>
+          </div>
+          <br />
+          <div>
+            <input type="button" value="Send" onclick="contactUs()" />
+            <p id="response"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

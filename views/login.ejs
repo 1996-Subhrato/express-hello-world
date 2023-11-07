@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partial/navbar') %>
+
+    <div class="wrapper-form">
+      <h1>Login</h1>
+      <br />
+
+      <form id="loginForm">
+        <div class="form-section-flex">
+          <div class="">
+            <label for="">Email</label>
+            <input type="email" required id="email" />
+          </div>
+          <br />
+          <div class="">
+            <label for="">Password</label>
+            <input type="password" required id="password" />
+          </div>
+
+          <br />
+          <div>
+            <input type="button" value="Sign In" onclick="userLogin()" />
+            <p id="response"></p>
+          </div>
+        </div>
+      </form>
+
+      <br />
+      <a href="/register" class="link">Create account</a>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

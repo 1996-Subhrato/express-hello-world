@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partial/userNavbar') %>
+
+    <div class="wrapper-form">
+      <h1>Welcome User!</h1>
+      <hr />
+      <p><b>Name</b>: <%=firstName%> <%=lastName%></p>
+      <p><b>Email</b>: <%=email%></p>
+    </div>
+  </body>
+</html>
