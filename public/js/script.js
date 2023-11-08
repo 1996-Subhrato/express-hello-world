@@ -19,17 +19,20 @@ function contactUs() {
             if (code === 1) {
                 document.getElementById("response").style.color = "red";
             } else {
-                document.getElementById("contactForm").reset();
-                document.getElementById("response").style.color = "green";
-                setTimeout(() => {
-                    document.getElementById("response").innerText = "";
-                    document.getElementById("response").style.color = "";
-                    document.getElementById("response").style.fontWeight = "";
-                }, 2500);
+                if (message === 'Form submitted successfully') {
+                    document.getElementById("contactForm").reset();
+                    document.getElementById("response").style.color = "green";
+                    setTimeout(() => {
+                        document.getElementById("response").innerText = "";
+                        document.getElementById("response").style.color = "";
+                        document.getElementById("response").style.fontWeight = "";
+                    }, 2500);
+                }
             }
         })
         .catch((e) => {
             console.log(e);
+            alert(e.message)
         });
 }
 
@@ -53,14 +56,19 @@ function userLogin() {
             if (code === 1) {
                 document.getElementById("response").style.color = "red";
             } else {
-                document.getElementById("response").style.color = "green";
-                setTimeout(() => {
-                    window.location.href = "/dashboard";
-                }, 500)
+                if (message === 'User Authenticated Successfully') {
+                    document.getElementById("response").style.color = "green";
+                    setTimeout(() => {
+                        window.location.href = "/dashboard";
+                    }, 500)
+                } else {
+                    document.getElementById("response").style.color = "red";
+                }
             }
         })
         .catch((e) => {
             console.log(e);
+            alert(e.message)
         });
 }
 
@@ -96,5 +104,6 @@ function registerNow() {
         })
         .catch((e) => {
             console.log(e);
+            alert(e.message)
         });
 }
